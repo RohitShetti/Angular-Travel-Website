@@ -1,0 +1,82 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* Full page background with styles */
+.booking-page {
+  background-image: url('https://th.bing.com/th/id/R.8d7a3dbe5b5fe4aa1f8606576cb71d5f?rik=CmapPt1JU6SqhA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fN0U5x3W.jpg&ehk=%2f88NmkjT0siwuTJ8KDChBU%2b6Jjuq4o0%2fdRgfog3RSDw%3d&risl=&pid=ImgRaw&r=0'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  
+}
+
+/* Container for content */
+.booking-content {
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.7);
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Title */
+.booking-content h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #ddd;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Highlights section */
+.highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1rem;
+
+}
+
+/* Individual highlight items */
+.highlight-item {
+  margin-bottom: 0.5rem;
+}
+
+.highlight-text {
+  font-size: 0.9rem;
+  color: #cccccc;
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Button styling */
+.start-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.start-btn:hover {
+  background-color: #218838;
+}

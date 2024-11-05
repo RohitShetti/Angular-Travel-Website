@@ -1,0 +1,38 @@
+body {
+    background-image: url('https://th.bing.com/th/id/R.bf0c4b12ad0940c813ee24fad8d5d52d?rik=Qk7fu66Bbmhv1w&riu=http%3a%2f%2fmedia4.onsugar.com%2ffiles%2f2014%2f02%2f17%2f838%2fn%2f1922441%2ff0bd144ded7b1bfd_shutterstock_89720368.jpg.xxxlarge_2x.jpg&ehk=fUmcMGiEracjw25Rik1ns8A1fL7txR4m1agzy%2bHZHsI%3d&risl=&pid=ImgRaw&r=0'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 8px; 
+    padding: 20px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 100%; 
+    max-width: 500px; 
+}
+
+h2 {
+    text-align: center; 
+    color: #333; 
+}
+
+.form-label {
+    font-weight: bold; 
+}
+
+.btn-primary {
+    width: 100%; 
+    padding: 10px; 
+}
+
+.text-danger {
+    font-size: 0.9em; 
+}

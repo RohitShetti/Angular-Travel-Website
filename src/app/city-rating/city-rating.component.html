@@ -1,0 +1,16 @@
+<div class="crop" [title]="rating">
+  <div>
+    <!-- Loop through the stars and apply gold color to clicked stars -->
+    <fa-icon
+      [icon]="faStar"
+      *ngFor="let star of stars; let i = index"
+      [ngClass]="{ 'gold-star': i < rating }"
+      (click)="onClick(i + 1)"
+      class="star"
+    >
+    </fa-icon>
+  </div>
+
+  <!-- Display the rating with conditional formatting -->
+  <div [ngClass]="getRatingClass()">{{ rating }} Star Rating</div>
+</div>

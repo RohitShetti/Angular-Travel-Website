@@ -1,0 +1,82 @@
+<div class="container mt-5">
+  <div class="card shadow-lg" *ngIf="city; else loading">
+    <div class="card-body">
+      <h1 class="text-center card-title">Edit {{ city.description }}</h1>
+      <form (ngSubmit)="onSave(f)" #f="ngForm">
+        <div class="mb-3">
+          <label for="description" class="form-label">City</label>
+          <input
+            type="text"
+            class="form-control"
+            id="description"
+            [(ngModel)]="city.description"
+            name="description"
+            required
+            #description="ngModel"
+          />
+          <div
+            *ngIf="
+              description.invalid && (description.dirty || description.touched)
+            "
+            class="text-danger"
+          >
+            <small *ngIf="description.errors?.['required']"
+              >Description is required.</small
+            >
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="rating" class="form-label">Rating</label>
+          <input
+            type="number"
+            class="form-control"
+            id="rating"
+            [(ngModel)]="city.rating"
+            name="rating"
+            min="1"
+            max="5"
+            required
+            #rating="ngModel"
+          />
+          <div
+            *ngIf="rating.invalid && (rating.dirty || rating.touched)"
+            class="text-danger"
+          >
+            <small *ngIf="rating.errors?.['required']"
+              >Rating is required.</small
+            >
+            <small *ngIf="rating.errors?.['min']">Minimum rating is 1.</small>
+            <small *ngIf="rating.errors?.['max']">Maximum rating is 5.</small>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="cost" class="form-label">Cost (in Rupees)</label>
+          <input
+            type="number"
+            class="form-control"
+            id="cost"
+            [(ngModel)]="city.cost"
+            name="cost"
+            required
+            #cost="ngModel"
+          />
+          <div
+            *ngIf="cost.invalid && (cost.dirty || cost.touched)"
+            class="text-danger"
+          >
+            <small *ngIf="cost.errors?.['required']">Cost is required.</small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+          Save
+        </button>
+      </form>
+    </div>
+  </div>
+  <ng-template #loading>
+    <p>Loading city details...</p>
+  </ng-template>
+</div>

@@ -1,0 +1,61 @@
+/* Full-page background image */
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Makes the image cover the entire viewport */
+    z-index: -1; /* Places the background image behind other content */
+  }
+  
+  /* Center the login card in the viewport */
+  .login-card {
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 1; /* Ensures the card appears on top of the background */
+  }
+  
+  /* Title styles */
+  mat-card-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  /* Styles for form fields */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styles */
+  button {
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    background-color: #1976d2;
+    color: #ffffff;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #115293;
+  }
+  
+  button.mat-button {
+    margin-top: 10px;
+    color: #1976d2;
+  }
+  
+  mat-error {
+    font-size: 12px;
+    color: #d32f2f;
+  }
+  

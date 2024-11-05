@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+/* Container Styling */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Title Styling */
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+/* List Styling */
+.list-group-item {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+/* Cost Styling */
+.text-success {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Button Styling */
+button {
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn {
+  flex: 1; /* Ensures buttons take equal space */
+  margin: 0 5px; /* Adds space between buttons */
+}
+
+button:hover {
+  background: #3498db;
+}

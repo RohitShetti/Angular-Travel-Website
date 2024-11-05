@@ -1,0 +1,67 @@
+ <div class="container mt-5">
+  <h1 class="text-center">Travel Destinations</h1>
+
+  <input
+    type="text"
+    placeholder="Search by city name"
+    [(ngModel)]="searchTerm"
+    (input)="onSearchChange()"
+    class="form-control"
+  />
+
+  <select class="form-select mt-3" (change)="updateFilter($event)">
+    <option value="All">All</option>
+    <option value="Cultural">Cultural</option>
+    <option value="Heritage">Heritage</option>
+    <option value="Adventure">Adventure</option>
+    <option value="Family">Family</option>
+  </select>
+
+  <div class="button-container mb-3">
+
+    <button class="btn btn-secondary" (click)="toggleAllImages()">
+      {{ allImagesVisible ? 'Hide All Images' : 'Show All Images' }}
+  </button>
+  
+    <button class="btn btn-primary" (click)="addCity()">
+        Add City
+    </button>
+
+</div>
+
+  <div class="row mt-4">
+    <div class="col-md-4" *ngFor="let city of filteredCities; let i = index">
+      <div class="card mb-4">
+        <img
+          [src]="city.image"
+          class="card-img-top"
+          [alt]="city.description"
+          *ngIf="allImagesVisible"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ city.description }}</h5>
+          <p class="card-text">Rating: {{ city.rating }}</p>
+          <ul>
+            <li *ngFor="let place of city.placesToSee">{{ place }}</li>
+          </ul>
+          <app-city-rating
+            [rating]="city.rating"
+            (ratingClicked)="onRatingClicked(city.rating)"
+          ></app-city-rating>
+          <button
+            class="btn btn-info mt-2"
+            (click)="viewCityDetails(city.id)"
+          >
+            More Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

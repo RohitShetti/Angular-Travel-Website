@@ -1,0 +1,147 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Wrapper for the entire Contact Us page */
+.contact-wrapper {
+  height: 100vh;
+  /* background: url('https://d26toa8f6ahusa.cloudfront.net/wp-content/uploads/2021/04/01145700/antelope-island_HEADER_BettymayaFoot.jpg'); */
+  background: url('https://i.pinimg.com/originals/5d/d9/2c/5dd92c04aa5851fbfbf44d08bfbeb090.jpg');
+  background-size: cover;
+  background-position: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  padding: 20px;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Main heading styling */
+.main-heading {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Container for contact info and form */
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(255, 255, 255, 0.9); /* White background with transparency */
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* Ensure the layout doesn't break on smaller screens */
+}
+
+/* Left-side contact information styling */
+.contact-info {
+  flex: 1 1 40%; /* Allow space flexibility */
+  min-width: 300px;
+  margin-bottom: 20px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Contact details list */
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info li {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Right-side contact form styling */
+.contact-form {
+  flex: 1 1 50%; /* Allow space flexibility */
+  min-width: 300px;
+  padding-left: 20px;
+}
+
+/* Ensure form does not shrink or break */
+.contact-form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Add spacing between form elements */
+}
+
+/* Form input styling */
+.contact-form label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+  transition: border 0.3s;
+}
+
+/* Prevent layout shift on focus */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff5722; /* Highlight border color on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+.submit-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Button hover effect */
+.submit-btn:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-form {
+    padding-left: 0;
+  }
+}
